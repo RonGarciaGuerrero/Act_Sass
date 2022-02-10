@@ -1,0 +1,176 @@
+@import "margen.scss";
+
+$ancho:1024px;
+$color-letra:#AAAAAA;
+$altura:514px;
+$margen:100px;
+$padding:20px;
+$pPeq:15px;
+$cant:1px;
+.peq{
+    width: sumar($pPeq,2 );
+    background-color: cadetblue;
+}
+
+ul{
+    margin: $margen;
+    padding: $padding;
+    background-color: blue;
+}
+.contenedor{
+    width:$ancho;
+}
+h1,h2,h3,p{
+    color:$color-letra;
+}
+body{
+    color:green;
+}
+
+
+//operaciones y funciones
+.mitad{
+    width: ($ancho/2);
+}
+.cuarto{
+    width: ($ancho/4);
+}
+.decimo{
+    width: partir($ancho,10 );
+}
+@function partir($tam,$num_partes){
+    @return ($tam/$num_partes);
+}
+
+@function sumar($pPeq,$cant){
+    @return ($tam+$pPeq);
+}
+
+
+
+
+
+
+
+
+//mixing e include
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
+  }
+
+.danger {
+    @include important-text;
+    background-color: green;
+}
+@mixin less-important-text {
+    color: blue;
+    font-size: 15px;
+    font-weight: normal;
+    border: 1px solid gray;
+}
+
+.light {
+    @include less-important-text;
+    background-color: yellow;
+}
+
+@mixin regular-text {
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    border: 1px solid black;
+  }
+
+.secondary {
+    @include regular-text;
+    background-color: rgb(83, 83, 83);
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// for y while
+
+$base-color: #036;
+
+@for $i from 1 through 3 {
+  ul:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+@for $p from 2 through 12 {
+    .col-#{$p}{
+        width:100/$p+"%";
+    }
+}
+
+//declaracion de la variable
+$p:2;
+@while $p<=12{
+    .col-while-#{$p}{
+        width: 100/$p+"%";
+    }
+    $p:$p+1;
+}
+
+//ejemplos de anidar
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+
+p{
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+        }
+        
+        text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+        }
+}
+
+//extends
+
+.button-basic  {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-report  {
+    @extend .button-basic;
+    background-color: red;
+  }
+  
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+  }
+
+
+ 

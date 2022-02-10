@@ -1,0 +1,202 @@
+.menu {
+  margin: 0;
+}
+
+.peq {
+  width: sumar(15px, 2);
+  background-color: cadetblue;
+}
+
+ul {
+  margin: 100px;
+  padding: 20px;
+  background-color: blue;
+}
+
+.contenedor {
+  width: 1024px;
+}
+
+h1, h2, h3, p {
+  color: #AAAAAA;
+}
+
+body {
+  color: green;
+}
+
+.mitad {
+  width: 512px;
+}
+
+.cuarto {
+  width: 256px;
+}
+
+.decimo {
+  width: partir(1024px, 10);
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: green;
+}
+
+.light {
+  color: blue;
+  font-size: 15px;
+  font-weight: normal;
+  border: 1px solid gray;
+  background-color: yellow;
+}
+
+.secondary {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  border: 1px solid black;
+  background-color: #535353;
+}
+
+ul:nth-child(3n+1) {
+  background-color: #004080;
+}
+
+ul:nth-child(3n+2) {
+  background-color: #004d99;
+}
+
+ul:nth-child(3n+3) {
+  background-color: #0059b3;
+}
+
+.col-2 {
+  width: "50%";
+}
+
+.col-3 {
+  width: "33.3333333333%";
+}
+
+.col-4 {
+  width: "25%";
+}
+
+.col-5 {
+  width: "20%";
+}
+
+.col-6 {
+  width: "16.6666666667%";
+}
+
+.col-7 {
+  width: "14.2857142857%";
+}
+
+.col-8 {
+  width: "12.5%";
+}
+
+.col-9 {
+  width: "11.1111111111%";
+}
+
+.col-10 {
+  width: "10%";
+}
+
+.col-11 {
+  width: "9.0909090909%";
+}
+
+.col-12 {
+  width: "8.3333333333%";
+}
+
+.col-while-2 {
+  width: "50%";
+}
+
+.col-while-3 {
+  width: "33.3333333333%";
+}
+
+.col-while-4 {
+  width: "25%";
+}
+
+.col-while-5 {
+  width: "20%";
+}
+
+.col-while-6 {
+  width: "16.6666666667%";
+}
+
+.col-while-7 {
+  width: "14.2857142857%";
+}
+
+.col-while-8 {
+  width: "12.5%";
+}
+
+.col-while-9 {
+  width: "11.1111111111%";
+}
+
+.col-while-10 {
+  width: "10%";
+}
+
+.col-while-11 {
+  width: "9.0909090909%";
+}
+
+.col-while-12 {
+  width: "8.3333333333%";
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: lowercase;
+  text-overflow: hidden;
+}
+
+.button-basic, .button-submit, .button-report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}
